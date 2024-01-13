@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c57930009bef4bb4091dce3443a5c2b9
+timeCreated: 1442785911
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 102269
+  packageName: Paintz
+  packageVersion: 1.7.1
+  assetPath: Assets/Paintz/Scripts/Resources/Shaders/Utility/PaintBinormal.shader
+  uploadId: 540581

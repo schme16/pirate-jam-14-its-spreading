@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: f15d289e2b54a37478dd5bb9c0c483f6
+timeCreated: 1506990213
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 102269
+  packageName: Paintz
+  packageVersion: 1.7.1
+  assetPath: Assets/Paintz/Scripts/Paint.cs
+  uploadId: 540581

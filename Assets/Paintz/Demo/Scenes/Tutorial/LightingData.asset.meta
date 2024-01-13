@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d2c26a28965ea2544acc6865b64afb87
+timeCreated: 1536578692
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 25800000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 102269
+  packageName: Paintz
+  packageVersion: 1.7.1
+  assetPath: Assets/Paintz/Demo/Scenes/Tutorial/LightingData.asset
+  uploadId: 540581

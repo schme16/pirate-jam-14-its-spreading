@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f07e3efe9a0eb9d4d89cc8df9e849b45
+timeCreated: 1536830884
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 102269
+  packageName: Paintz
+  packageVersion: 1.7.1
+  assetPath: Assets/Paintz/Demo/Materials/PaintOnly.mat
+  uploadId: 540581

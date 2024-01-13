@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8c638d8873322e244ac23673c3ef08a3
+timeCreated: 1507050253
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 102269
+  packageName: Paintz
+  packageVersion: 1.7.1
+  assetPath: Assets/Paintz/Scripts/Resources/Shaders/Transparent/PaintStandardTransparent.shader
+  uploadId: 540581

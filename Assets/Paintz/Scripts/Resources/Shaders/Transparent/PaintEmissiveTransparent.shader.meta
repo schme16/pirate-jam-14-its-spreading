@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 0b3ec8622f0b55e4f943eb8a553aa1ed
+timeCreated: 1507050253
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 102269
+  packageName: Paintz
+  packageVersion: 1.7.1
+  assetPath: Assets/Paintz/Scripts/Resources/Shaders/Transparent/PaintEmissiveTransparent.shader
+  uploadId: 540581

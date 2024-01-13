@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: adb45065b83dfe843837584a2f5b386a
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 102269
+  packageName: Paintz
+  packageVersion: 1.7.1
+  assetPath: Assets/Paintz/URP/Scenes/Samples.unity
+  uploadId: 540581

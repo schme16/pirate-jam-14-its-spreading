@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3023a668bc8e84348b76635ee647217c
+timeCreated: 1507366579
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 102269
+  packageName: Paintz
+  packageVersion: 1.7.1
+  assetPath: Assets/Paintz/Demo/Scenes/Trails.unity
+  uploadId: 540581

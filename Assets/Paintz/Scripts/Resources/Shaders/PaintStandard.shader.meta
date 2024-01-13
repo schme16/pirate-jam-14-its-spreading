@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2b0f5fce771a1c645adeaed55998c8f1
+timeCreated: 1507050253
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 102269
+  packageName: Paintz
+  packageVersion: 1.7.1
+  assetPath: Assets/Paintz/Scripts/Resources/Shaders/PaintStandard.shader
+  uploadId: 540581

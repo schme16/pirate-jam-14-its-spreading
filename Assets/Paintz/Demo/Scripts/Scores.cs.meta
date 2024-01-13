@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: f9d4d7c7b46fd4a44816bb1889daa037
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 102269
+  packageName: Paintz
+  packageVersion: 1.7.1
+  assetPath: Assets/Paintz/Demo/Scripts/Scores.cs
+  uploadId: 540581

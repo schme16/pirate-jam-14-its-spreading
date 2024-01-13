@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b02fea59cc290f94784cd9eb2f4c163e
+timeCreated: 1507050253
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 102269
+  packageName: Paintz
+  packageVersion: 1.7.1
+  assetPath: Assets/Paintz/Scripts/Resources/Shaders/Transparent/PaintCutoutTransparent.shader
+  uploadId: 540581

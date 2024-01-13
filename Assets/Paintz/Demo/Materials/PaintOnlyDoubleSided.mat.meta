@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2326a303e5ec33d4995563ff915630b1
+timeCreated: 1536830884
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 102269
+  packageName: Paintz
+  packageVersion: 1.7.1
+  assetPath: Assets/Paintz/Demo/Materials/PaintOnlyDoubleSided.mat
+  uploadId: 540581

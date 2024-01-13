@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 5e0906fb9654a8343a8d976f6a4b4cfb
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 102269
+  packageName: Paintz
+  packageVersion: 1.7.1
+  assetPath: Assets/Paintz/Demo/Shaders/Glass.shader
+  uploadId: 540581

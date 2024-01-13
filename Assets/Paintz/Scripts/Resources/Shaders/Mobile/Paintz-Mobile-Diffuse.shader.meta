@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 94d6438e6b1726b45a8c17061bb3cb7f
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 102269
+  packageName: Paintz
+  packageVersion: 1.7.1
+  assetPath: Assets/Paintz/Scripts/Resources/Shaders/Mobile/Paintz-Mobile-Diffuse.shader
+  uploadId: 540581

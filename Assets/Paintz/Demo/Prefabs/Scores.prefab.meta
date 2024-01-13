@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b9be5e13bd9d8ff4fbeb5c733ed93814
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 102269
+  packageName: Paintz
+  packageVersion: 1.7.1
+  assetPath: Assets/Paintz/Demo/Prefabs/Scores.prefab
+  uploadId: 540581

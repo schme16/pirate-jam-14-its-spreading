@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 19cf121bf19a47c48a8f37d0dc78740c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 102269
+  packageName: Paintz
+  packageVersion: 1.7.1
+  assetPath: Assets/Paintz/Demo/Materials/MobileBumped.mat
+  uploadId: 540581

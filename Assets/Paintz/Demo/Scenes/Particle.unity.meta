@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6cc1e2c469ecf16468ff80aa6086cc83
+timeCreated: 1507198551
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 102269
+  packageName: Paintz
+  packageVersion: 1.7.1
+  assetPath: Assets/Paintz/Demo/Scenes/Particle.unity
+  uploadId: 540581

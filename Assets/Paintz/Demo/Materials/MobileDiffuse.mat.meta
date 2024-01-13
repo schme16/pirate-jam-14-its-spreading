@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 073da30727b8dfa4baf8ff730a1316a2
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 102269
+  packageName: Paintz
+  packageVersion: 1.7.1
+  assetPath: Assets/Paintz/Demo/Materials/MobileDiffuse.mat
+  uploadId: 540581

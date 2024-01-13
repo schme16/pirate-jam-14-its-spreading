@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 3703099b963052240a5ba85f0acdb363
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 102269
+  packageName: Paintz
+  packageVersion: 1.7.1
+  assetPath: Assets/Paintz/URP/Graphs/ShaderCode/PaintCG.hlsl
+  uploadId: 540581

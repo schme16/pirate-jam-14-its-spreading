@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 9fd71aca193b5b04eaddc0d9492fc430
+timeCreated: 1506998219
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 102269
+  packageName: Paintz
+  packageVersion: 1.7.1
+  assetPath: Assets/Paintz/Demo/Materials/PaintWhite.mat
+  uploadId: 540581

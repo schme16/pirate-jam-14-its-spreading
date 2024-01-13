@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 33804abb4db88d7499c88d91c70bc798
+timeCreated: 1536830884
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 102269
+  packageName: Paintz
+  packageVersion: 1.7.1
+  assetPath: Assets/Paintz/Demo/Materials/PaintVertexColors.mat
+  uploadId: 540581
