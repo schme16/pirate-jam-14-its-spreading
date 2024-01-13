@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: sp-floor
-  m_Shader: {fileID: -6465566751694194690, guid: 45f042a848ff85d4db47dab8041bb8e4,
+  m_Shader: {fileID: -6465566751694194690, guid: 7654b000f644e594796a1d9a9090a393,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -122,8 +122,8 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SplatBumpScale: 1
-    - _SplatEdgeBump: 68.6
-    - _SplatEdgeWidth: 42.45
+    - _SplatEdgeBump: 1
+    - _SplatEdgeWidth: 1
     - _SplatEmission: 0
     - _SplatMetallic: 0
     - _SplatSmoothness: 0.75
@@ -139,8 +139,8 @@ Material:
     - _Emission_ST: {r: 1, g: 1, b: 0, a: 0}
     - _MatallicMap_ST: {r: 1, g: 1, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _SplatBump_ST: {r: 0, g: 0, b: 0, a: 0}
-    - _SplatColor1: {r: 1, g: 0, b: 0, a: 1}
+    - _SplatBump_ST: {r: 25, g: 25, b: 0, a: 0}
+    - _SplatColor1: {r: 0.4901961, g: 0.36078432, b: 0.10980393, a: 1}
     - _SplatColor2: {r: 0, g: 1, b: 0, a: 1}
     - _SplatColor3: {r: 0, g: 0, b: 1, a: 1}
     - _SplatColor4: {r: 1, g: 1, b: 0, a: 1}
