@@ -50,7 +50,6 @@ public class PaintExample : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha5)) brush.splatChannel = 4;
 
         if (RandomChannel) brush.splatChannel = Random.Range(0, 4);
-
         if (Input.GetMouseButton(0))
         {
             if (!SingleShotClick || (SingleShotClick && !HoldingButtonDown))

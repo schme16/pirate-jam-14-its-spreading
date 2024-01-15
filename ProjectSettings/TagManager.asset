@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Blob
   - CinemachineTarget
+  - IckBall
   layers:
   - Default
   - TransparentFX

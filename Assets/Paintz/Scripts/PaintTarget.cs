@@ -191,10 +191,10 @@ public class PaintTarget : MonoBehaviour
         PaintRaycast(ray, brush);
     }
 
-    private static void PaintRaycast(Ray ray, Brush brush, bool multi = true)
+    public static void PaintRaycast(Ray ray, Brush brush, bool multi = true, float maxDistance = 10000)
     {
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 10000))
+        if (Physics.Raycast(ray, out hit, maxDistance))
         {
             if (multi)
             {
