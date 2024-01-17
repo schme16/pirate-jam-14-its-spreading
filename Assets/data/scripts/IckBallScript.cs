@@ -11,86 +11,20 @@ public class IckBallScript : MonoBehaviour
 	public Brush brush;
 	public Brush brushSmaller;
 	public Transform prefab;
+	public ParticleSystem ps;
 	public float timeBetweenRays = 2.25f;
 	public Ray ray;
 	private float time = 0;
-	public float minDistBetweenIckBalls;
+	public float minDistBetweenIckBalls = 5;
 
 	private void Start()
 	{
 		rb = GetComponent<Rigidbody>();
-
-		/*Collider[] hitColliders = Physics.OverlapSphere(transform.position, minDistBetweenIckBalls, LayerMask.GetMask("ick-ball"), QueryTriggerInteraction.Collide);
-		if (hitColliders.Length > 0)
-		{
-			bool test = false;
-			foreach (var hc in hitColliders)
-			{
-				if (hc.transform.parent == transform.parent)
-				{
-					test = true;
-				}
-			}
-
-			if (test)
-			{
-				DestroyImmediate(gameObject);
-			}
-		}
-		else
-		{
-			FireRay(-1, brush);
-		}*/
+		ps = GetComponent<ParticleSystem>();
 		FireRay(-1, brush);
 	}
 
-	private void Update()
-	{
-		time += Time.deltaTime;
-		
-		if (time > timeBetweenRays)
-		{
-			time = 0;
-			RaycastHit hit;
-
-			if (Physics.Raycast(transform.position, transform.up, out hit, 0.025f))
-			{
-				Debug.DrawRay(transform.position, transform.up * hit.distance, Color.yellow, 5f);
-
-				if (!hit.transform.CompareTag("IckBall"))
-				{
-					Collider[] hitColliders = Physics.OverlapSphere(hit.transform.position, minDistBetweenIckBalls, LayerMask.GetMask("ick-ball"), QueryTriggerInteraction.Collide);
-					bool test = false;
-					if (hitColliders.Length > 0)
-					{
-						Debug.Log(3);
-						foreach (var hc in hitColliders)
-						{
-							if (hc.transform.parent == transform.parent)
-							{
-								test = true;
-							}
-						}
-					}
-
-					if (!test)
-					{
-						Debug.Log(4);
-						IckBallScript ickBall = Instantiate(prefab).GetComponent<IckBallScript>();
-						ickBall.transform.position = hit.point;
-						ickBall.transform.parent = hit.transform;
-						ickBall.minDistBetweenIckBalls = minDistBetweenIckBalls;
-						ickBall.prefab = prefab;
-					}
-				}
-			}
-			else
-			{
-				Debug.DrawRay(transform.position, transform.up * 0.025f, Color.white, 1f);
-				Debug.Log("Did not Hit");
-			}
-		}
-	}
+	private void Update() { }
 
 	public void FireRay(int direction, Brush b)
 	{
@@ -98,26 +32,86 @@ public class IckBallScript : MonoBehaviour
 		PaintTarget.PaintRaycast(ray, b, false, 0.25f);
 	}
 
-
-	/*private void OnTriggerEnter(Collider other)
+	/*private void OnParticleCollision(GameObject other)
 	{
-		if (!other.transform.CompareTag("IckBall"))
+		if (other.CompareTag("Paintable"))
 		{
-			IckBallScript ickBall = Instantiate(prefab).GetComponent<IckBallScript>();
-			ickBall.transform.position = transform.position;
-			ickBall.transform.parent = other.transform;
-			ickBall.minDistBetweenIckBalls = minDistBetweenIckBalls;
-			ickBall.prefab = prefab;
-			Debug.Log(other.name);
+			int numCollisionEvents = ps.GetCollisionEvents(other, collisionEvents);
+			if (numCollisionEvents > 0 && !other.CompareTag("IckBall"))
+			{
+				ParticleCollisionEvent col = collisionEvents[0];
+
+				Collider[] hitColliders = Physics.OverlapSphere(transform.position, minDistBetweenIckBalls, LayerMask.GetMask("ick-ball"), QueryTriggerInteraction.Collide);
+				bool hasHit = false;
+				for (int i = 0; i < hitColliders.Length; i++)
+				{
+					if (hitColliders[i].transform.parent == other.transform)
+					{
+						hasHit = true;
+						Debug.Log(hitColliders[i].name);
+						break;
+					}
+				}
+
+
+				if (!hasHit)
+				{
+					//Transform ickBall = Instantiate(prefab, other.transform, true);
+					//ickBall.transform.position = col.intersection; /* + (hit.normal * 0.01f)#1#
+					PaintTarget.PaintObject(other.GetComponent<PaintTarget>(), col.intersection, col.normal, brush);
+				}
+			}
+		}
+	}
+	*/
+
+	void TrySpawnIck(Collider other)
+	{
+		if (other.CompareTag("Paintable"))
+		{
+			Vector3 point = other.ClosestPoint(transform.position);
+			Collider[] hitColliders = Physics.OverlapSphere(point, minDistBetweenIckBalls, LayerMask.GetMask("ick-ball"), QueryTriggerInteraction.Collide);
+			bool hasHit = false;
+			for (int i = 0; i < hitColliders.Length; i++)
+			{
+				if (hitColliders[i].transform.parent == other.transform)
+				{
+					hasHit = true;
+					//Debug.Log(hitColliders[i].name);
+					break;
+				}
+			}
+
+
+			if (!hasHit)
+			{
+				Transform ickBall = Instantiate(prefab, other.transform, true);
+				ickBall.position = point;
+				ickBall.parent = other.transform;
+				bool ray = Physics.Raycast(point, (transform.position - point).normalized, out var hit, 1f,~(1 << 7));
+				if (ray)
+				{
+					Debug.Log(hit.transform.name);
+					PaintTarget.PaintObject(other.GetComponent<PaintTarget>(), hit.point, hit.normal, brush);
+					
+				}
+			}
 		}
 	}
 
-	private void OnCollisionEnter(Collision other)
+	private void OnTriggerEnter(Collider other)
 	{
-		Debug.Log(222);
-		/*IckBallScript ickBall = Instantiate(gameObject).GetComponent<IckBallScript>();
-		ickBall.transform.position = transform.position;
-		ickBall.transform.parent = other.transform;
-		ickBall.minDistBetweenIckBalls = minDistBetweenIckBalls;#1#
-	}*/
+		if (!other.CompareTag("IckBall"))
+		{
+			TrySpawnIck(other);
+		}
+	}
+
+	private void OnTriggerStay(Collider other)
+	{
+		if (!other.CompareTag("IckBall"))
+		{
+			TrySpawnIck(other);
+		}
+	}
 }

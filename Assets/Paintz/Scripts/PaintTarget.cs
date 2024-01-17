@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using MoreMountains.Tools;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -397,6 +398,11 @@ public class PaintTarget : MonoBehaviour
     {
         CheckValid();
         if (SetupOnStart) SetupPaint();
+        if (transform.CompareTag("Untagged"))
+        {
+            transform.tag = "Paintable";
+            //transform.gameObject.layer = 8;
+        }
     }
 
     private void SetupPaint()

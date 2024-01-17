@@ -7,6 +7,13 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.rundotgames.unitybutler": {
+      "version": "https://github.com/RunDotGames/unity-butler.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "bf87091e912a688bd3829885d93a65a8f408e077"
+    },
     "com.unity.ai.navigation": {
       "version": "2.0.0",
       "depth": 0,

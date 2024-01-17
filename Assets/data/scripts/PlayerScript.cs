@@ -66,9 +66,7 @@ public class PlayerScript : MonoBehaviour
 		{
 			//Debug.Log(rb.velocity.magnitude);
 		}
-		
-		
-		
+
 
 		time += Time.deltaTime;
 
@@ -79,44 +77,29 @@ public class PlayerScript : MonoBehaviour
 			bool ray = Physics.Raycast(transform.position, -transform.up, out var hit, 0.05f);
 			if (ray)
 			{
-				Debug.Log(1);
 				if (!hit.transform.CompareTag("IckBall"))
 				{
-					Debug.Log(2);
 					Collider[] hitColliders = Physics.OverlapSphere(transform.position, minDistBetweenIckBalls, LayerMask.GetMask("ick-ball"), QueryTriggerInteraction.Collide);
-					bool test = hitColliders.Length > 0;
-				
-					if (!test)
+					bool hasHit = false;
+					for (int i = 0; i < hitColliders.Length; i++)
 					{
-						IckBallScript ickBall = Instantiate(ickBallPrefab).GetComponent<IckBallScript>();
-						ickBall.transform.position = hit.point + (hit.normal * 0.01f);
-						ickBall.transform.LookAt(transform.position);
-						ickBall.transform.parent = hit.transform;
-						ickBall.minDistBetweenIckBalls = minDistBetweenIckBalls;
-						ickBall.prefab = ickBallPrefab;
+						if (hitColliders[i].transform.parent == hit.transform)
+						{
+							hasHit = true;
+							break;
+						}
+					}
+
+
+					if (!hasHit)
+					{
+						Transform ickBall = Instantiate(ickBallPrefab, hit.transform, true);
+						ickBall.transform.position = hit.point; /* + (hit.normal * 0.01f)*/;
+						//ickBall.transform.LookAt(transform.position);
 					}
 				}
 			}
 		}
-		
-		
 	}
 
-	private void OnParticleCollision(GameObject other)
-	{
-		/*Collider[] hitColliders = Physics.OverlapSphere(transform.position, minDistBetweenIckBalls, LayerMask.GetMask("ick-ball"), QueryTriggerInteraction.Collide);
-		bool hasHit = false;
-		foreach (var hitCollider in hitColliders)
-		{
-			hasHit = true;
-			Debug.Log(hitCollider.name);
-		}
-
-		if (!hasHit)
-		{
-			IckBallScript ickBall = Instantiate(ickBallPrefab).GetComponent<IckBallScript>();
-			ickBall.transform.position = transform.position;
-			ickBall.transform.parent = other.transform;
-		}*/
-	}
 }
