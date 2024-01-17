@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -363,7 +363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -1041,7 +1041,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -1087,7 +1087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -2397,7 +2397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -2443,7 +2443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -2489,7 +2489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -2586,7 +2586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -2749,7 +2749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -2795,7 +2795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -3180,7 +3180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -8275,7 +8275,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 679628597}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2756825, y: -1e-45, z: -0, w: 0.96124876}
+  m_LocalRotation: {x: 0.2756825, y: 3e-45, z: -1e-45, w: 0.96124876}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -8301,7 +8301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -8474,7 +8474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -8520,7 +8520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -8566,7 +8566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -8612,7 +8612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -8658,7 +8658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -8755,7 +8755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -8801,7 +8801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -8847,7 +8847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -8893,7 +8893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -8939,7 +8939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -8985,7 +8985,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -9031,7 +9031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -9077,7 +9077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -13980,7 +13980,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -14079,7 +14079,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1320904966}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.25572816, y: 0.00000000831712, z: -0.0000000022000772, w: 0.9667488}
+  m_LocalRotation: {x: 0.25572816, y: -0.0000000083171265, z: 0.0000000022000786,
+    w: 0.9667488}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -14579,7 +14580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -14708,7 +14709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -14781,28 +14782,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1530913490
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4618325833632797738}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -450974505742679726, guid: 79bbda3e6a2bcac4f92d1554b15a6385, type: 3}
 --- !u!1 &1536749543
 GameObject:
   m_ObjectHideFlags: 0
@@ -14856,7 +14835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -14902,7 +14881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -14979,7 +14958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -15025,7 +15004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -15129,7 +15108,7 @@ PrefabInstance:
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.824
+      value: 6.885
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f,
         type: 3}
@@ -15149,12 +15128,12 @@ PrefabInstance:
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000008317121
+      value: -0.0000000083171265
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000002200077
+      value: 0.0000000022000786
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f,
         type: 3}
@@ -15248,7 +15227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -15522,7 +15501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -15562,7 +15541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -15648,7 +15627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -15694,7 +15673,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -15740,7 +15719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -15839,7 +15818,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1821892447}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.23573288, y: 0.000000027085376, z: -0.000000006570072, w: 0.9718179}
+  m_LocalRotation: {x: 0.23573288, y: -0.0000000058132916, z: 0.0000000014101238,
+    w: 0.9718179}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -15865,7 +15845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 32
+  paintTextureSize: 256
   SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
@@ -16025,7 +16005,7 @@ Transform:
   m_GameObject: {fileID: 1975422650}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.862, y: 6.824, z: -4.89}
+  m_LocalPosition: {x: 7.862, y: 6.885, z: -4.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16486,13 +16466,12 @@ GameObject:
   - component: {fileID: 5231827370335366762}
   - component: {fileID: 1807125231961661540}
   - component: {fileID: 1941730333024777250}
-  - component: {fileID: 1530913490}
-  - component: {fileID: 5231827370335366763}
   - component: {fileID: 5231827370335366764}
   - component: {fileID: 5231827370335366765}
   - component: {fileID: 5231827370335366768}
   - component: {fileID: 5231827370335366766}
   - component: {fileID: 5231827370335366770}
+  - component: {fileID: 5231827370335366771}
   m_Layer: 6
   m_Name: Ick
   m_TagString: Untagged
@@ -16509,7 +16488,7 @@ Transform:
   m_GameObject: {fileID: 4618325833632797738}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.862, y: 3.97, z: -0.89}
+  m_LocalPosition: {x: 7.862, y: 4.031, z: -0.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16518,33 +16497,6 @@ Transform:
   - {fileID: 1215604748}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &5231827370335366763
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4618325833632797738}
-  serializedVersion: 4
-  m_Mass: 0.25
-  m_Drag: 0.25
-  m_AngularDrag: 0.25
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 80
-  m_CollisionDetection: 1
 --- !u!82 &5231827370335366764
 AudioSource:
   m_ObjectHideFlags: 0
@@ -16663,6 +16615,7 @@ MonoBehaviour:
     type: 3}
   ickBallHolder: {fileID: 0}
   timeBetweenRays: 0.25
+  controller: {fileID: 0}
 --- !u!199 &5231827370335366766
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -21498,6 +21451,32 @@ MonoBehaviour:
     splatRandomRotation: 180
     splatChannel: 0
   RandomChannel: 0
+--- !u!143 &5231827370335366771
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4618325833632797738}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 0.01
+  m_Radius: 0.02
+  m_SlopeLimit: 45
+  m_StepOffset: 0.02
+  m_SkinWidth: 0.01
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
