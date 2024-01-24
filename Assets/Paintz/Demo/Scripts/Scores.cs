@@ -28,7 +28,7 @@ public class Scores : MonoBehaviour
     private float nextUpdateTime = 0;
 	void Update ()
     {
-        if (Time.realtimeSinceStartup < nextUpdateTime) return;
+        /*if (Time.realtimeSinceStartup < nextUpdateTime) return;
         nextUpdateTime = Time.realtimeSinceStartup + updateSpeed;
 
         PaintTarget.TallyScore();
@@ -43,7 +43,7 @@ public class Scores : MonoBehaviour
         if (player1 != null) player1.text = Mathf.RoundToInt(((PaintTarget.scores.x / n) * 100.0f)).ToString() + "%";
         if (player2 != null) player2.text = Mathf.RoundToInt(((PaintTarget.scores.y / n) * 100.0f)).ToString() + "%";
         if (player3 != null) player3.text = Mathf.RoundToInt(((PaintTarget.scores.z / n) * 100.0f)).ToString() + "%";
-        if (player4 != null) player4.text = Mathf.RoundToInt(((PaintTarget.scores.w / n) * 100.0f)).ToString() + "%";
+        if (player4 != null) player4.text = Mathf.RoundToInt(((PaintTarget.scores.w / n) * 100.0f)).ToString() + "%";*/
 
     }
 }

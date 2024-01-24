@@ -55,15 +55,15 @@ public class PaintTargetEditor : Editor
             GUILayout.BeginVertical(GUI.skin.box);
 
             GUILayout.BeginHorizontal();
-            GUILayout.Label(PaintTarget.scores.x.ToString());
+            /*GUILayout.Label(PaintTarget.scores.x.ToString());
             GUILayout.Label(PaintTarget.scores.y.ToString());
             GUILayout.Label(PaintTarget.scores.z.ToString());
-            GUILayout.Label(PaintTarget.scores.w.ToString());
+            GUILayout.Label(PaintTarget.scores.w.ToString());*/
             GUILayout.EndHorizontal();
 
             if (GUILayout.Button("Tally Scores"))
             {
-                PaintTarget.TallyScore();
+                //PaintTarget.TallyScore();
             }
             GUILayout.EndVertical();
 

@@ -3,19 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using MoreMountains.Feedbacks;
 using MoreMountains.Tools;
+using MoreMountains.Tools;
 using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-	public float movementSpeed = 0.125f;
-	public float maxSpeed = 2f;
-	public float jumpSpeed = 5;
+	public float gravityValue = -9.81f;
+	public float playerSpeed = 2.0f;
+	public float jumpHeight = 1.0f;
 	public float minDistBetweenIckBalls = 5;
 	public ParticleSystem ps;
 	public Transform ickBallPrefab;
 	public Transform ickBallHolder;
 	public float timeBetweenRays = 0.25f;
 	private float time = 0;
+	private PaintTarget pt;
 	private Camera cam;
 	private Rigidbody rb;
 
@@ -23,9 +25,6 @@ public class PlayerScript : MonoBehaviour
 	public CharacterController controller;
 	private Vector3 playerVelocity;
 	private bool groundedPlayer;
-	private float playerSpeed = 2.0f;
-	private float jumpHeight = 1.0f;
-	private float gravityValue = -9.81f;
 
 
 	// Start is called before the first frame update
@@ -37,6 +36,7 @@ public class PlayerScript : MonoBehaviour
 		//Set the rigidbody
 		rb = GetComponent<Rigidbody>();
 		controller = GetComponent<CharacterController>();
+		pt = GameObject.FindObjectOfType<PaintTarget>();
 
 		//Hide the cursor
 		Cursor.visible = false;
@@ -77,35 +77,31 @@ public class PlayerScript : MonoBehaviour
 			//Debug.Log(rb.velocity.magnitude);
 		}*/
 
-		
-		
-		
-		
+
 		groundedPlayer = controller.isGrounded;
-        if (groundedPlayer && playerVelocity.y < 0)
-        {
-            playerVelocity.y = 0f;
-        }
+		if (groundedPlayer && playerVelocity.y < 0)
+		{
+			playerVelocity.y = 0f;
+		}
 
-        //Vector3 move = Time.deltaTime * playerSpeed * (new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"))) ;
-        controller.Move(transform.forward * (y * playerSpeed * Time.deltaTime));
+		//Vector3 move = Time.deltaTime * playerSpeed * (new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"))) ;
+		controller.Move(transform.forward * (y * playerSpeed * Time.deltaTime));
 
-        /*if (move != Vector3.zero)
-        {
-            //gameObject.transform.forward = move;
-        }*/
+		/*if (move != Vector3.zero)
+		{
+			//gameObject.transform.forward = move;
+		}*/
 
-        // Changes the height position of the player..
-        if (Input.GetButtonDown("Jump") && groundedPlayer)
-        {
-            playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
-        }
 
-        playerVelocity.y += gravityValue * Time.deltaTime;
-        controller.Move(playerVelocity * Time.deltaTime);
-		
-		
-		
+		// Changes the height position of the player..
+		if (Input.GetButtonDown("Jump") && groundedPlayer)
+		{
+			playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
+		}
+
+		playerVelocity.y += gravityValue * Time.deltaTime;
+		controller.Move(playerVelocity * Time.deltaTime);
+
 
 		time += Time.deltaTime;
 
