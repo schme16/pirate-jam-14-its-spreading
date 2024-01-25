@@ -1,9 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using MoreMountains.Feedbacks;
 using MoreMountains.Tools;
 using MoreMountains.Tools;
+using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
@@ -12,19 +15,28 @@ public class PlayerScript : MonoBehaviour
 	public float playerSpeed = 2.0f;
 	public float jumpHeight = 1.0f;
 	public float minDistBetweenIckBalls = 5;
-	public ParticleSystem ps;
+	public float rotationSpeed = 1;
 	public Transform ickBallPrefab;
-	public Transform ickBallHolder;
 	public float timeBetweenRays = 0.25f;
+	public LayerMask climbableLayers;
+	public CinemachineFreeLook free;
 	private float time = 0;
-	private PaintTarget pt;
+	private float idleVal = 0;
+	private float meltVal = -1.35f;
+	private float currentVal = 0;
 	private Camera cam;
-	private Rigidbody rb;
-
-
+	public bool ascending = false;
+	private Action delayedAction;
+	private bool canAscend = false;
+	public Material mat;
 	public CharacterController controller;
 	private Vector3 playerVelocity;
 	private bool groundedPlayer;
+	private static readonly int ManualControl = Shader.PropertyToID("_ManualControl");
+
+
+	//UI
+	public GameObject uiAscendText;
 
 
 	// Start is called before the first frame update
@@ -33,16 +45,15 @@ public class PlayerScript : MonoBehaviour
 		//Set the camera
 		cam = Camera.main;
 
-		//Set the rigidbody
-		rb = GetComponent<Rigidbody>();
-		controller = GetComponent<CharacterController>();
-		pt = GameObject.FindObjectOfType<PaintTarget>();
-
 		//Hide the cursor
 		Cursor.visible = false;
 
 		//Lock the cursor to the game window
 		Cursor.lockState = CursorLockMode.Locked;
+
+		controller = GetComponent<CharacterController>();
+
+		mat = GetComponent<MeshRenderer>().material;
 	}
 
 	// Physics updates
@@ -52,89 +63,148 @@ public class PlayerScript : MonoBehaviour
 		bool jump = Input.GetButtonDown("Jump");
 		bool sneak = Input.GetButtonDown("Sneak");
 		bool dash = Input.GetButtonDown("Dash");
+		bool climb = Input.GetButtonDown("Climb");
 		float y = Input.GetAxisRaw("Vertical");
+		canAscend = false;
 
-		/*if (x != 0)
+
+		//MOVEMENT
+		//Don't allow movement if ascending
+		if (!ascending)
 		{
-			transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + (Time.deltaTime * (rotationSpeed * -x)), transform.eulerAngles.z);
-		}*/
+			currentVal += Time.deltaTime;
 
-		transform.eulerAngles = new Vector3(transform.eulerAngles.x, cam.transform.eulerAngles.y, transform.eulerAngles.z);
+			var transform1 = transform;
+			var eulerAngles = transform1.eulerAngles;
+			eulerAngles = new Vector3(eulerAngles.x, cam.transform.eulerAngles.y, eulerAngles.z);
+			transform1.eulerAngles = eulerAngles;
 
-		/*if (y != 0)
-		{
-			var maxV = transform.forward * (maxSpeed * y);
-			rb.AddForce(maxV - rb.velocity, ForceMode.Force);
-		}
-
-		if (jump && !isJumping)
-		{
-			rb.AddForce(transform.up * (movementSpeed * jumpSpeed), ForceMode.Impulse);
-		}
-
-		if (rb.velocity.magnitude > 1)
-		{
-			//Debug.Log(rb.velocity.magnitude);
-		}*/
-
-
-		groundedPlayer = controller.isGrounded;
-		if (groundedPlayer && playerVelocity.y < 0)
-		{
-			playerVelocity.y = 0f;
-		}
-
-		//Vector3 move = Time.deltaTime * playerSpeed * (new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"))) ;
-		controller.Move(transform.forward * (y * playerSpeed * Time.deltaTime));
-
-		/*if (move != Vector3.zero)
-		{
-			//gameObject.transform.forward = move;
-		}*/
-
-
-		// Changes the height position of the player..
-		if (Input.GetButtonDown("Jump") && groundedPlayer)
-		{
-			playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
-		}
-
-		playerVelocity.y += gravityValue * Time.deltaTime;
-		controller.Move(playerVelocity * Time.deltaTime);
-
-
-		time += Time.deltaTime;
-
-		if (time > timeBetweenRays)
-		{
-			time = 0;
-
-			bool ray = Physics.Raycast(transform.position, -transform.up, out var hit, 0.05f);
-			if (ray)
+			groundedPlayer = controller.isGrounded;
+			if (groundedPlayer && playerVelocity.y < 0)
 			{
-				if (!hit.transform.CompareTag("IckBall"))
+				playerVelocity.y = 0f;
+			}
+
+			//Vector3 move = Time.deltaTime * playerSpeed * (new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"))) ;
+			controller.Move(transform1.forward * (y * playerSpeed * Time.deltaTime));
+
+			if (x is < 0 or > 0)
+			{
+				free.m_XAxis.Value += (x * rotationSpeed * Time.deltaTime);
+				//transform.Rotate(new Vector3(0, 0, rotationSpeed * Time.deltaTime));
+			}
+
+
+			// Changes the height position of the player..
+			if (Input.GetButtonDown("Jump") && groundedPlayer)
+			{
+				playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
+			}
+
+			playerVelocity.y += gravityValue * Time.deltaTime;
+			controller.Move(playerVelocity * Time.deltaTime);
+
+
+			time += Time.deltaTime;
+
+			if (time > timeBetweenRays)
+			{
+				time = 0;
+
+				bool ray = Physics.Raycast(transform1.position, -transform1.up, out var hit, 0.05f);
+				if (ray)
 				{
-					Collider[] hitColliders = Physics.OverlapSphere(transform.position, minDistBetweenIckBalls, LayerMask.GetMask("ick-ball"), QueryTriggerInteraction.Collide);
-					bool hasHit = false;
-					for (int i = 0; i < hitColliders.Length; i++)
+					if (!hit.transform.CompareTag("IckBall"))
 					{
-						if (hitColliders[i].transform.parent == hit.transform)
+						Collider[] hitColliders = Physics.OverlapSphere(transform1.position, minDistBetweenIckBalls, LayerMask.GetMask("ick-ball"), QueryTriggerInteraction.Collide);
+						bool hasHit = false;
+						for (int i = 0; i < hitColliders.Length; i++)
 						{
-							hasHit = true;
-							break;
+							if (hitColliders[i].transform.parent == hit.transform)
+							{
+								hasHit = true;
+								break;
+							}
 						}
-					}
 
 
-					if (!hasHit)
-					{
-						Transform ickBall = Instantiate(ickBallPrefab, hit.transform, true);
-						ickBall.transform.position = hit.point; /* + (hit.normal * 0.01f)*/
-						;
-						//ickBall.transform.LookAt(transform.position);
+						if (!hasHit)
+						{
+							Transform ickBall = Instantiate(ickBallPrefab, hit.transform, true);
+							ickBall.transform.position = hit.point; /* + (hit.normal * 0.01f)*/
+							;
+							//ickBall.transform.LookAt(transform.position);
+						}
 					}
 				}
 			}
+
+
+			//First see if there's a thing above us
+			bool climbRay = Physics.Raycast(transform.position, transform1.up, out var climbHit, 9999, climbableLayers);
+			if (climbRay)
+			{
+				//Fire one more ray just a little above the object to get the "top" object, minus some gaps allowance
+				bool climbToTopRay = Physics.Raycast(climbHit.point + (transform1.up * 5f), -transform1.up, out var topHit, 50f, climbableLayers);
+				if (climbToTopRay)
+				{
+					canAscend = true;
+
+					//are we on the ground, and did we ask to climb?
+					if (controller.isGrounded && climb)
+					{
+						ascend(transform1.position, topHit.point);
+					}
+				}
+			}
+		}
+		else
+		{
+			currentVal -= Time.deltaTime;
+		}
+
+
+		//Clamp the animation
+		currentVal = Mathf.Clamp(currentVal, meltVal, idleVal);
+
+		//Sync the material property	
+		mat.SetFloat(nameID: ManualControl, currentVal);
+
+		uiAscendText.SetActive(canAscend);
+	}
+
+	void ascend(Vector3 from, Vector3 to, bool playEffect = true)
+	{
+		Debug.Log("Spawn ascend effect at origin");
+
+		//mat
+
+		//Prevent multiple teleports getting queued
+		ascending = true;
+
+
+		SetTimeout(() =>
+		{
+			Debug.Log("Spawn ascend effect destination");
+			transform.position = to;
+			ascending = false;
+			delayedAction = null;
+		}, 1f);
+	}
+
+	private void SetTimeout(Action action, float delayInSeconds)
+	{
+		delayedAction = action;
+		Invoke(nameof(ExecuteDelayedAction), delayInSeconds);
+	}
+
+	// Named method to execute the anonymous function
+	private void ExecuteDelayedAction()
+	{
+		if (delayedAction != null)
+		{
+			// This method will be called after the delay, invoking the anonymous function
+			delayedAction.Invoke();
 		}
 	}
 }
