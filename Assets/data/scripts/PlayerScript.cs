@@ -28,10 +28,10 @@ public class PlayerScript : MonoBehaviour
 	public bool ascending = false;
 	private Action delayedAction;
 	private bool canAscend = false;
-	public Material mat;
 	public CharacterController controller;
 	private Vector3 playerVelocity;
 	private bool groundedPlayer;
+	public Animator anim;
 	private static readonly int ManualControl = Shader.PropertyToID("_ManualControl");
 
 
@@ -52,8 +52,6 @@ public class PlayerScript : MonoBehaviour
 		Cursor.lockState = CursorLockMode.Locked;
 
 		controller = GetComponent<CharacterController>();
-
-		mat = GetComponent<MeshRenderer>().material;
 	}
 
 	// Physics updates
@@ -91,6 +89,7 @@ public class PlayerScript : MonoBehaviour
 			if (x is < 0 or > 0)
 			{
 				free.m_XAxis.Value += (x * rotationSpeed * Time.deltaTime);
+
 				//transform.Rotate(new Vector3(0, 0, rotationSpeed * Time.deltaTime));
 			}
 
@@ -150,6 +149,7 @@ public class PlayerScript : MonoBehaviour
 				{
 					canAscend = true;
 
+
 					//are we on the ground, and did we ask to climb?
 					if (controller.isGrounded && climb)
 					{
@@ -167,21 +167,19 @@ public class PlayerScript : MonoBehaviour
 		//Clamp the animation
 		currentVal = Mathf.Clamp(currentVal, meltVal, idleVal);
 
-		//Sync the material property	
-		mat.SetFloat(nameID: ManualControl, currentVal);
-
+		//Show/hide the ui for ascending 
 		uiAscendText.SetActive(canAscend);
+
+		//Sync the current melt state
+		anim.SetBool("melt", ascending);
 	}
 
 	void ascend(Vector3 from, Vector3 to, bool playEffect = true)
 	{
 		Debug.Log("Spawn ascend effect at origin");
 
-		//mat
-
 		//Prevent multiple teleports getting queued
 		ascending = true;
-
 
 		SetTimeout(() =>
 		{
@@ -189,7 +187,7 @@ public class PlayerScript : MonoBehaviour
 			transform.position = to;
 			ascending = false;
 			delayedAction = null;
-		}, 1f);
+		}, 0.5f);
 	}
 
 	private void SetTimeout(Action action, float delayInSeconds)
