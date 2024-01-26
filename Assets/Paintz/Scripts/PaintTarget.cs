@@ -432,8 +432,14 @@ public class PaintTarget : MonoBehaviour
 		}
 
 		mesh = GetComponent<MeshFilter>();
-
-		//Debug.Log(transform.name + ": " + CalculateSurfaceArea(mesh.mesh));
+		if (mesh != null)
+		{
+			Debug.Log(transform.name + ": " + CalculateSurfaceArea(mesh.mesh));
+		}
+		else
+		{
+			Debug.Log(transform.name + ": No mesh filter!");
+		}
 	}
 
 	private void SetupPaint()

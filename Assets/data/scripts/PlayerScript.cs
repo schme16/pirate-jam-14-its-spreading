@@ -24,7 +24,11 @@ public class PlayerScript : MonoBehaviour
 	public CharacterController controller;
 	private Vector3 playerVelocity;
 	private bool groundedPlayer;
+
+	public AudioSource sfxSquelch;
+	public AudioSource sfxSquelchAscend;
 	public Animator anim;
+	public GameManager gm;
 	private static readonly int ManualControl = Shader.PropertyToID("_ManualControl");
 
 
@@ -38,18 +42,20 @@ public class PlayerScript : MonoBehaviour
 		//Set the camera
 		cam = Camera.main;
 
-		//Hide the cursor
-		Cursor.visible = false;
-
-		//Lock the cursor to the game window
-		Cursor.lockState = CursorLockMode.Locked;
-
 		controller = GetComponent<CharacterController>();
 	}
 
 	// Physics updates
 	void Update()
 	{
+		//Show/hide the ui for ascending 
+		uiAscendText.SetActive(false);
+
+		if (gm.state != "start")
+		{
+			return;
+		}
+
 		float x = Input.GetAxisRaw("Horizontal");
 		bool jump = Input.GetButtonDown("Jump");
 		bool sneak = Input.GetButtonDown("Sneak");
@@ -76,8 +82,25 @@ public class PlayerScript : MonoBehaviour
 				playerVelocity.y = 0f;
 			}
 
+
 			//Vector3 move = Time.deltaTime * playerSpeed * (new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"))) ;
+
 			controller.Move(transform1.forward * (y * playerSpeed * Time.deltaTime));
+
+			if (y != 0)
+			{
+				if (!sfxSquelch.isPlaying)
+				{
+					sfxSquelch.Play();
+				}
+			}
+			else
+			{
+				if (sfxSquelch.isPlaying)
+				{
+					sfxSquelch.Pause();
+				}
+			}
 
 			if (x is < 0 or > 0)
 			{
@@ -123,9 +146,7 @@ public class PlayerScript : MonoBehaviour
 						if (!hasHit)
 						{
 							Transform ickBall = Instantiate(ickBallPrefab, hit.transform, true);
-							ickBall.transform.position = hit.point; /* + (hit.normal * 0.01f)*/
-							;
-							//ickBall.transform.LookAt(transform.position);
+							ickBall.transform.position = hit.point;
 						}
 					}
 				}
@@ -167,7 +188,7 @@ public class PlayerScript : MonoBehaviour
 		anim.SetBool("melt", ascending);
 	}
 
-	
+
 	void ascend(Vector3 from, Vector3 to, bool playEffect = true)
 	{
 		Debug.Log("Spawn ascend effect at origin");
@@ -177,6 +198,7 @@ public class PlayerScript : MonoBehaviour
 
 		SetTimeout(() =>
 		{
+			sfxSquelchAscend.PlayOneShot(sfxSquelchAscend.clip);
 			Debug.Log("Spawn ascend effect destination");
 			transform.position = to;
 			ascending = false;
