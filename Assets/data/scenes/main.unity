@@ -406,6 +406,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Keyboard
       objectReference: {fileID: 0}
+    - target: {fileID: 3453003745287414040, guid: 99f41039e17541c43abe1c447975cbc3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3811,6 +3816,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desk
       objectReference: {fileID: 0}
+    - target: {fileID: 5622610728192656242, guid: c1c8966c9c41e6c4f9ef10838189d5a6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3828,6 +3838,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Printer
+      objectReference: {fileID: 0}
+    - target: {fileID: 3548840478592956603, guid: dafa3de6994ffc242bb4be0d228da69f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4182668883158573569, guid: dafa3de6994ffc242bb4be0d228da69f,
         type: 3}
@@ -3896,6 +3911,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CabinetShort
+      objectReference: {fileID: 0}
+    - target: {fileID: 4988580954589147664, guid: 8629e02bae8e024458ffee3bf4af4fb1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5652351088253266090, guid: 8629e02bae8e024458ffee3bf4af4fb1,
         type: 3}
@@ -4014,6 +4034,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Person4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2977702349791161655, guid: dca7c211aaa424a499336a856563a085,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7276927260196261679, guid: dca7c211aaa424a499336a856563a085,
         type: 3}
@@ -4161,6 +4186,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Laptop
       objectReference: {fileID: 0}
+    - target: {fileID: 6763112244397256637, guid: 0a476be6e32b7b348a03cfb1d6f02e77,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4229,6 +4259,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PCBox
       objectReference: {fileID: 0}
+    - target: {fileID: 2991152299613011669, guid: 21f1a4ecf9f6fa6439f28564ef0531aa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4246,6 +4281,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mouse_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 433587456246607640, guid: 3a8e135fee6916d4e80fb3ed66add8e8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 959189557752149410, guid: 3a8e135fee6916d4e80fb3ed66add8e8,
         type: 3}
@@ -4314,6 +4354,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Monitor
+      objectReference: {fileID: 0}
+    - target: {fileID: 2653625921927194906, guid: 5550b4704306cc24fa555414287f29c1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3429563804026762144, guid: 5550b4704306cc24fa555414287f29c1,
         type: 3}
@@ -4433,6 +4478,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 9051165153231972028, guid: 0734f85400bd7cb49819eee303698ade,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4530,6 +4580,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CabinetTall
       objectReference: {fileID: 0}
+    - target: {fileID: 7060757066794810925, guid: d61f899de755e434ebd2950584bc21d9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7689625368765031575, guid: d61f899de755e434ebd2950584bc21d9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4597,6 +4652,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pen
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944449979187044357, guid: be55dce1113647c4295ae30f85e05cf6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7715920545058519743, guid: be55dce1113647c4295ae30f85e05cf6,
         type: 3}
@@ -4676,6 +4736,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Person3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5120470961199718898, guid: a737abc88e65ab847804c7fd4993da5d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5495589571484941128, guid: a737abc88e65ab847804c7fd4993da5d,
         type: 3}
@@ -4763,12 +4828,12 @@ PrefabInstance:
     - target: {fileID: 798439187528389041, guid: b64ebd4686aca634b9d108005d355a9b,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.03521434
+      value: 0.035214335
       objectReference: {fileID: 0}
     - target: {fileID: 798439187528389041, guid: b64ebd4686aca634b9d108005d355a9b,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0072791534
+      value: -0.007279153
       objectReference: {fileID: 0}
     - target: {fileID: 822273688173349939, guid: b64ebd4686aca634b9d108005d355a9b,
         type: 3}
@@ -4843,17 +4908,17 @@ PrefabInstance:
     - target: {fileID: 1311761666247529129, guid: b64ebd4686aca634b9d108005d355a9b,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.15147178
+      value: 0.1514718
       objectReference: {fileID: 0}
     - target: {fileID: 1311761666247529129, guid: b64ebd4686aca634b9d108005d355a9b,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.035408396
+      value: 0.035408437
       objectReference: {fileID: 0}
     - target: {fileID: 1311761666247529129, guid: b64ebd4686aca634b9d108005d355a9b,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0062675946
+      value: -0.006267602
       objectReference: {fileID: 0}
     - target: {fileID: 1558311176612391927, guid: b64ebd4686aca634b9d108005d355a9b,
         type: 3}
@@ -4918,12 +4983,12 @@ PrefabInstance:
     - target: {fileID: 6350203627588754457, guid: b64ebd4686aca634b9d108005d355a9b,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.03521434
+      value: 0.035214335
       objectReference: {fileID: 0}
     - target: {fileID: 6350203627588754457, guid: b64ebd4686aca634b9d108005d355a9b,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0072791534
+      value: -0.007279153
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4992,6 +5057,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Chair
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093622834459292849, guid: b345e99597404ba48843c09bc04a4ba3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
