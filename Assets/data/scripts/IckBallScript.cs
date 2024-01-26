@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using MoreMountains.Tools;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -108,6 +107,7 @@ public class IckBallScript : MonoBehaviour
 
 	private void OnTriggerStay(Collider other)
 	{
+
 		if (!other.CompareTag("IckBall"))
 		{
 			TrySpawnIck(other);

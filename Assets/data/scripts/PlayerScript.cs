@@ -1,12 +1,5 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using Cinemachine;
-using MoreMountains.Feedbacks;
-using MoreMountains.Tools;
-using MoreMountains.Tools;
-using TMPro;
-using Unity.Mathematics;
 using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
@@ -174,6 +167,7 @@ public class PlayerScript : MonoBehaviour
 		anim.SetBool("melt", ascending);
 	}
 
+	
 	void ascend(Vector3 from, Vector3 to, bool playEffect = true)
 	{
 		Debug.Log("Spawn ascend effect at origin");

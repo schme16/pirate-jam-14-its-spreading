@@ -16,7 +16,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: e5a3f6a24558e704cb7ce76648314092,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.447
+      value: 2.221
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e5a3f6a24558e704cb7ce76648314092,
         type: 3}
@@ -183,12 +183,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 128
-  SetupOnStart: 0
+  paintTextureSize: 256
+  SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
   splatTex: {fileID: 0}
   splatTexPick: {fileID: 0}
+  weighting: 1
+  mesh: {fileID: 0}
 --- !u!1 &2701783887578869022 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8256134651489076907, guid: e5a3f6a24558e704cb7ce76648314092,
@@ -229,12 +231,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 128
-  SetupOnStart: 0
+  paintTextureSize: 256
+  SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
   splatTex: {fileID: 0}
   splatTexPick: {fileID: 0}
+  weighting: 1
+  mesh: {fileID: 0}
 --- !u!1 &3801196155444508730 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7146521406498821007, guid: e5a3f6a24558e704cb7ce76648314092,
@@ -275,12 +279,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 128
-  SetupOnStart: 0
+  paintTextureSize: 256
+  SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
   splatTex: {fileID: 0}
   splatTexPick: {fileID: 0}
+  weighting: 1
+  mesh: {fileID: 0}
 --- !u!1 &5819927116147807323 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -516098083770646512, guid: e5a3f6a24558e704cb7ce76648314092,
@@ -321,12 +327,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 128
-  SetupOnStart: 0
+  paintTextureSize: 256
+  SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
   splatTex: {fileID: 0}
   splatTexPick: {fileID: 0}
+  weighting: 1
+  mesh: {fileID: 0}
 --- !u!1 &6691893480335267246 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8416272007918961125, guid: e5a3f6a24558e704cb7ce76648314092,
@@ -367,9 +375,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 128
-  SetupOnStart: 0
+  paintTextureSize: 256
+  SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
   splatTex: {fileID: 0}
   splatTexPick: {fileID: 0}
+  weighting: 1
+  mesh: {fileID: 0}

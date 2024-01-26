@@ -11,22 +11,22 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 8fcdbde5e3ea9d243b4c71b12ac6dee1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.34
+      value: 8.086
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8fcdbde5e3ea9d243b4c71b12ac6dee1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.637
+      value: 0.6370001
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8fcdbde5e3ea9d243b4c71b12ac6dee1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.615
+      value: -0.459
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8fcdbde5e3ea9d243b4c71b12ac6dee1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.86330724
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8fcdbde5e3ea9d243b4c71b12ac6dee1,
         type: 3}
@@ -36,7 +36,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 8fcdbde5e3ea9d243b4c71b12ac6dee1,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.50467867
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8fcdbde5e3ea9d243b4c71b12ac6dee1,
         type: 3}
@@ -51,7 +51,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 8fcdbde5e3ea9d243b4c71b12ac6dee1,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -60.62
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8fcdbde5e3ea9d243b4c71b12ac6dee1,
         type: 3}
@@ -275,6 +275,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 801719737852062709}
+    - targetCorrespondingSourceObject: {fileID: 4424396828587804706, guid: 8fcdbde5e3ea9d243b4c71b12ac6dee1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4103226881867208628}
+    - targetCorrespondingSourceObject: {fileID: 4424396828587804706, guid: 8fcdbde5e3ea9d243b4c71b12ac6dee1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3694040646905250375}
     - targetCorrespondingSourceObject: {fileID: -7640558969779515294, guid: 8fcdbde5e3ea9d243b4c71b12ac6dee1,
         type: 3}
       insertIndex: -1
@@ -323,6 +331,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 9031264366470589295}
+    - targetCorrespondingSourceObject: {fileID: 5914173764048766335, guid: 8fcdbde5e3ea9d243b4c71b12ac6dee1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3808167350976352223}
+    - targetCorrespondingSourceObject: {fileID: 5914173764048766335, guid: 8fcdbde5e3ea9d243b4c71b12ac6dee1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6139187260893302994}
     - targetCorrespondingSourceObject: {fileID: -5171399634971331766, guid: 8fcdbde5e3ea9d243b4c71b12ac6dee1,
         type: 3}
       insertIndex: -1
@@ -461,11 +477,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paintTextureSize: 256
-  SetupOnStart: 0
+  SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
   splatTex: {fileID: 0}
   splatTexPick: {fileID: 0}
+  weighting: 1
+  mesh: {fileID: 0}
 --- !u!1 &1592996518051223938 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7640558969779515294, guid: 8fcdbde5e3ea9d243b4c71b12ac6dee1,
@@ -587,11 +605,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paintTextureSize: 256
-  SetupOnStart: 0
+  SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
   splatTex: {fileID: 0}
   splatTexPick: {fileID: 0}
+  weighting: 1
+  mesh: {fileID: 0}
 --- !u!1 &4311988371515538090 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5171399634971331766, guid: 8fcdbde5e3ea9d243b4c71b12ac6dee1,
@@ -642,10 +662,52 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.0035006686, y: 0.0031296415, z: 0.002966122}
   m_Center: {x: 0.000014581375, y: -0.000061175575, z: 0.00020872144}
+--- !u!64 &4103226881867208628
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4506590870017524162}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 70948873267775455, guid: 8fcdbde5e3ea9d243b4c71b12ac6dee1, type: 3}
+--- !u!114 &3694040646905250375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4506590870017524162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paintTextureSize: 128
+  SetupOnStart: 1
+  PaintAllSplats: 0
+  debugTexture: 0
+  splatTex: {fileID: 0}
+  splatTexPick: {fileID: 0}
+  weighting: 1
+  mesh: {fileID: 0}
 --- !u!1 &4649269720002698183 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4857620179410162215, guid: 8fcdbde5e3ea9d243b4c71b12ac6dee1,
@@ -714,11 +776,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paintTextureSize: 256
-  SetupOnStart: 0
+  SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
   splatTex: {fileID: 0}
   splatTexPick: {fileID: 0}
+  weighting: 1
+  mesh: {fileID: 0}
 --- !u!1 &5113490027458723614 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4979567129936492286, guid: 8fcdbde5e3ea9d243b4c71b12ac6dee1,
@@ -759,11 +823,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paintTextureSize: 256
-  SetupOnStart: 0
+  SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
   splatTex: {fileID: 0}
   splatTexPick: {fileID: 0}
+  weighting: 1
+  mesh: {fileID: 0}
 --- !u!1 &5289382095259124928 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5371550809261985056, guid: 8fcdbde5e3ea9d243b4c71b12ac6dee1,
@@ -831,11 +897,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paintTextureSize: 256
-  SetupOnStart: 0
+  SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
   splatTex: {fileID: 0}
   splatTexPick: {fileID: 0}
+  weighting: 1
+  mesh: {fileID: 0}
 --- !u!1 &5436968434847831856 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5233112405309087440, guid: 8fcdbde5e3ea9d243b4c71b12ac6dee1,
@@ -944,6 +1012,48 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.00346675, y: 0.003201276, z: 0.0015792361}
   m_Center: {x: 0.00006934203, y: -0.00006293231, z: -0.00049897184}
+--- !u!114 &3808167350976352223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5908547105872497823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paintTextureSize: 128
+  SetupOnStart: 1
+  PaintAllSplats: 0
+  debugTexture: 0
+  splatTex: {fileID: 0}
+  splatTexPick: {fileID: 0}
+  weighting: 1
+  mesh: {fileID: 0}
+--- !u!64 &6139187260893302994
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5908547105872497823}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3447038591770236762, guid: 8fcdbde5e3ea9d243b4c71b12ac6dee1, type: 3}
 --- !u!1 &6228423320800697970 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3061335044448905326, guid: 8fcdbde5e3ea9d243b4c71b12ac6dee1,
@@ -1038,11 +1148,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paintTextureSize: 256
-  SetupOnStart: 0
+  SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
   splatTex: {fileID: 0}
   splatTexPick: {fileID: 0}
+  weighting: 1
+  mesh: {fileID: 0}
 --- !u!1 &8197017318755198056 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -995970412500324984, guid: 8fcdbde5e3ea9d243b4c71b12ac6dee1,
@@ -1110,12 +1222,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintTextureSize: 128
-  SetupOnStart: 0
+  paintTextureSize: 256
+  SetupOnStart: 1
   PaintAllSplats: 0
   debugTexture: 0
   splatTex: {fileID: 0}
   splatTexPick: {fileID: 0}
+  weighting: 1
+  mesh: {fileID: 0}
 --- !u!1 &8821283146026855044 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -466329591000292508, guid: 8fcdbde5e3ea9d243b4c71b12ac6dee1,

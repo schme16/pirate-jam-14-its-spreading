@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -60,7 +61,28 @@ public class PaintTarget : MonoBehaviour
 	private static Texture2D Tex4;
 	private static PaintTarget[] targetsCache;
 	private static GameObject splatObject;
+	public float weighting = 1;
+	public MeshFilter mesh;
+	public float splatWeight;
 
+	float CalculateSurfaceArea(Mesh mesh)
+	{
+		int[] triangles = mesh.triangles;
+		Vector3[] vertices = mesh.vertices;
+
+		double sum = 0.0;
+
+		for (int i = 0; i < triangles.Length; i += 3)
+		{
+			Vector3 corner = vertices[triangles[i]];
+			Vector3 a = vertices[triangles[i + 1]] - corner;
+			Vector3 b = vertices[triangles[i + 2]] - corner;
+
+			sum += Vector3.Cross(a, b).magnitude;
+		}
+
+		return (float)(sum / 2.0);
+	}
 
 	public static void TallyScore(bool useTargetsCache = false)
 	{
@@ -78,7 +100,7 @@ public class PaintTarget : MonoBehaviour
 		}
 
 		PaintTarget[] targets = useTargetsCache && targetsCache != null ? targetsCache : Object.FindObjectsOfType<PaintTarget>();
-		
+
 		if (useTargetsCache && targetsCache == null)
 		{
 			targetsCache = targets;
@@ -97,25 +119,25 @@ public class PaintTarget : MonoBehaviour
 			Tex4.Apply();
 
 			Color scoresColor = new Color(0, 0, 0, 0);
-			scoresColor += Tex4.GetPixel(0, 0);
-			scoresColor += Tex4.GetPixel(0, 1);
-			scoresColor += Tex4.GetPixel(0, 2);
-			scoresColor += Tex4.GetPixel(0, 3);
+			scoresColor += Tex4.GetPixel(0, 0) * target.weighting;
+			scoresColor += Tex4.GetPixel(0, 1) * target.weighting;
+			scoresColor += Tex4.GetPixel(0, 2) * target.weighting;
+			scoresColor += Tex4.GetPixel(0, 3) * target.weighting;
 
-			scoresColor += Tex4.GetPixel(1, 0);
-			scoresColor += Tex4.GetPixel(1, 1);
-			scoresColor += Tex4.GetPixel(1, 2);
-			scoresColor += Tex4.GetPixel(1, 3);
+			scoresColor += Tex4.GetPixel(1, 0) * target.weighting;
+			scoresColor += Tex4.GetPixel(1, 1) * target.weighting;
+			scoresColor += Tex4.GetPixel(1, 2) * target.weighting;
+			scoresColor += Tex4.GetPixel(1, 3) * target.weighting;
 
-			scoresColor += Tex4.GetPixel(2, 0);
-			scoresColor += Tex4.GetPixel(2, 1);
-			scoresColor += Tex4.GetPixel(2, 2);
-			scoresColor += Tex4.GetPixel(2, 3);
+			scoresColor += Tex4.GetPixel(2, 0) * target.weighting;
+			scoresColor += Tex4.GetPixel(2, 1) * target.weighting;
+			scoresColor += Tex4.GetPixel(2, 2) * target.weighting;
+			scoresColor += Tex4.GetPixel(2, 3) * target.weighting;
 
-			scoresColor += Tex4.GetPixel(3, 0);
-			scoresColor += Tex4.GetPixel(3, 1);
-			scoresColor += Tex4.GetPixel(3, 2);
-			scoresColor += Tex4.GetPixel(3, 3);
+			scoresColor += Tex4.GetPixel(3, 0) * target.weighting;
+			scoresColor += Tex4.GetPixel(3, 1) * target.weighting;
+			scoresColor += Tex4.GetPixel(3, 2) * target.weighting;
+			scoresColor += Tex4.GetPixel(3, 3) * target.weighting;
 
 			scores.x += scoresColor.r;
 			scores.y += scoresColor.g;
@@ -407,8 +429,11 @@ public class PaintTarget : MonoBehaviour
 		if (transform.CompareTag("Untagged"))
 		{
 			transform.tag = "Paintable";
-			//transform.gameObject.layer = 8;
 		}
+
+		mesh = GetComponent<MeshFilter>();
+
+		//Debug.Log(transform.name + ": " + CalculateSurfaceArea(mesh.mesh));
 	}
 
 	private void SetupPaint()
@@ -502,7 +527,6 @@ public class PaintTarget : MonoBehaviour
 	public void PaintSplat(Paint paint)
 	{
 		m_Splats.Add(paint);
-		return;
 	}
 
 	private void PaintSplats()
