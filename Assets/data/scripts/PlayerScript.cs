@@ -87,7 +87,7 @@ public class PlayerScript : MonoBehaviour
 
 			controller.Move(transform1.forward * (y * playerSpeed * Time.deltaTime));
 
-			if (y != 0)
+			if (y != 0 && groundedPlayer)
 			{
 				if (!sfxSquelch.isPlaying)
 				{
@@ -191,7 +191,6 @@ public class PlayerScript : MonoBehaviour
 
 	void ascend(Vector3 from, Vector3 to, bool playEffect = true)
 	{
-		Debug.Log("Spawn ascend effect at origin");
 
 		//Prevent multiple teleports getting queued
 		ascending = true;
@@ -199,7 +198,6 @@ public class PlayerScript : MonoBehaviour
 		SetTimeout(() =>
 		{
 			sfxSquelchAscend.PlayOneShot(sfxSquelchAscend.clip);
-			Debug.Log("Spawn ascend effect destination");
 			transform.position = to;
 			ascending = false;
 			delayedAction = null;

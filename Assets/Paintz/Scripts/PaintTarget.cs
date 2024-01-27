@@ -431,15 +431,15 @@ public class PaintTarget : MonoBehaviour
 			transform.tag = "Paintable";
 		}
 
-		mesh = GetComponent<MeshFilter>();
+		/*mesh = GetComponent<MeshFilter>();
 		if (mesh != null)
 		{
-			Debug.Log(transform.name + ": " + CalculateSurfaceArea(mesh.mesh));
+			//Debug.Log(transform.name + ": " + CalculateSurfaceArea(mesh.mesh));
 		}
 		else
 		{
-			Debug.Log(transform.name + ": No mesh filter!");
-		}
+			//Debug.Log(transform.name + ": No mesh filter!");
+		}*/
 	}
 
 	private void SetupPaint()

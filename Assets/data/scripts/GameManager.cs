@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using Cinemachine;
 using TMPro;
 using UnityEngine;
@@ -31,12 +29,9 @@ public class GameManager : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
-		//Lock the cursor to the game window
-		Cursor.lockState = CursorLockMode.Confined;
+		ResetUI();
 
-		startPos = ick.position;
-		startRot = ick.rotation;
-		
+
 		SetState("main menu");
 	}
 
@@ -100,6 +95,11 @@ public class GameManager : MonoBehaviour
 				break;
 
 			case "finish":
+				if (Input.GetButtonDown("Restart"))
+				{
+					SetState("start");
+				}
+
 				break;
 
 			case "nope":
@@ -110,7 +110,10 @@ public class GameManager : MonoBehaviour
 	void ResetUI()
 	{
 		cam.enabled = false;
+
 		Cursor.visible = false;
+		Cursor.lockState = CursorLockMode.Locked;
+
 		uiMainMenu.gameObject.SetActive(false);
 		uiGameRunningScreen.gameObject.SetActive(false);
 		uiFinishedScreen.gameObject.SetActive(false);
@@ -120,16 +123,19 @@ public class GameManager : MonoBehaviour
 	{
 		//Hide the cursor
 		Cursor.visible = true;
+		Cursor.lockState = CursorLockMode.Confined;
+
 
 		uiMainMenu.gameObject.SetActive(true);
 	}
 
 	void StartGame()
 	{
-		ick.position = startPos;
-		ick.rotation = startRot;
+		ick.gameObject.SetActive(false);
+		ick.localPosition = Vector3.zero;
+		ick.localRotation = Quaternion.identity;
+		ick.gameObject.SetActive(true);
 
-		Debug.Log(player.position);
 		cam.enabled = true;
 		PaintTarget.ClearAllPaint();
 		if (timerOverride > 0)
@@ -148,6 +154,8 @@ public class GameManager : MonoBehaviour
 	{
 		//Hide the cursor
 		Cursor.visible = true;
+		Cursor.lockState = CursorLockMode.Confined;
+
 
 		PaintTarget.TallyScore(true);
 		float pb = PlayerPrefs.GetFloat("highScore");

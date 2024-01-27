@@ -222,6 +222,7 @@ MonoBehaviour:
   splatTexPick: {fileID: 0}
   weighting: 1
   mesh: {fileID: 0}
+  splatWeight: 0
 --- !u!1 &3169403425279944153 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7583343868983580184, guid: 587ca81bf3ea83c4cbf69cd1835546c2,
@@ -248,6 +249,7 @@ MonoBehaviour:
   splatTexPick: {fileID: 0}
   weighting: 1
   mesh: {fileID: 0}
+  splatWeight: 0
 --- !u!64 &8109101689884665729
 MeshCollider:
   m_ObjectHideFlags: 0

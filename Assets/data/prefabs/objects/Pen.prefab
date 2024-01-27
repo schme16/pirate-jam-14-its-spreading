@@ -231,6 +231,7 @@ MonoBehaviour:
   splatTexPick: {fileID: 0}
   weighting: 1
   mesh: {fileID: 0}
+  splatWeight: 0
 --- !u!64 &7363176614207815844
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -279,6 +280,7 @@ MonoBehaviour:
   splatTexPick: {fileID: 0}
   weighting: 1
   mesh: {fileID: 0}
+  splatWeight: 0
 --- !u!64 &6229600491999402454
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -327,6 +329,7 @@ MonoBehaviour:
   splatTexPick: {fileID: 0}
   weighting: 1
   mesh: {fileID: 0}
+  splatWeight: 0
 --- !u!64 &9037122954113060232
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -375,6 +378,7 @@ MonoBehaviour:
   splatTexPick: {fileID: 0}
   weighting: 1
   mesh: {fileID: 0}
+  splatWeight: 0
 --- !u!64 &5638007906955068866
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -423,6 +427,7 @@ MonoBehaviour:
   splatTexPick: {fileID: 0}
   weighting: 1
   mesh: {fileID: 0}
+  splatWeight: 0
 --- !u!64 &4894501864271219259
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -477,6 +482,7 @@ MonoBehaviour:
   splatTexPick: {fileID: 0}
   weighting: 1
   mesh: {fileID: 0}
+  splatWeight: 0
 --- !u!64 &2639831737736550669
 MeshCollider:
   m_ObjectHideFlags: 0

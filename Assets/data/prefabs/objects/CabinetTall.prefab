@@ -269,6 +269,7 @@ MonoBehaviour:
   splatTexPick: {fileID: 0}
   weighting: 1
   mesh: {fileID: 0}
+  splatWeight: 0
 --- !u!64 &8087137453629051098
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -317,6 +318,7 @@ MonoBehaviour:
   splatTexPick: {fileID: 0}
   weighting: 1
   mesh: {fileID: 0}
+  splatWeight: 0
 --- !u!64 &2447460290511237561
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -365,6 +367,7 @@ MonoBehaviour:
   splatTexPick: {fileID: 0}
   weighting: 1
   mesh: {fileID: 0}
+  splatWeight: 0
 --- !u!64 &2086140951416931920
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -413,6 +416,7 @@ MonoBehaviour:
   splatTexPick: {fileID: 0}
   weighting: 1
   mesh: {fileID: 0}
+  splatWeight: 0
 --- !u!64 &2668443589730114873
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -467,6 +471,7 @@ MonoBehaviour:
   splatTexPick: {fileID: 0}
   weighting: 1
   mesh: {fileID: 0}
+  splatWeight: 0
 --- !u!64 &5743100892560329017
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -515,6 +520,7 @@ MonoBehaviour:
   splatTexPick: {fileID: 0}
   weighting: 1
   mesh: {fileID: 0}
+  splatWeight: 0
 --- !u!64 &340317883178760500
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -563,6 +569,7 @@ MonoBehaviour:
   splatTexPick: {fileID: 0}
   weighting: 1
   mesh: {fileID: 0}
+  splatWeight: 0
 --- !u!64 &6126771426689998598
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -611,6 +618,7 @@ MonoBehaviour:
   splatTexPick: {fileID: 0}
   weighting: 1
   mesh: {fileID: 0}
+  splatWeight: 0
 --- !u!64 &4311308571040714319
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -659,6 +667,7 @@ MonoBehaviour:
   splatTexPick: {fileID: 0}
   weighting: 1
   mesh: {fileID: 0}
+  splatWeight: 0
 --- !u!64 &5419160602066931204
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -707,6 +716,7 @@ MonoBehaviour:
   splatTexPick: {fileID: 0}
   weighting: 1
   mesh: {fileID: 0}
+  splatWeight: 0
 --- !u!64 &6946831847312842534
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -755,6 +765,7 @@ MonoBehaviour:
   splatTexPick: {fileID: 0}
   weighting: 1
   mesh: {fileID: 0}
+  splatWeight: 0
 --- !u!64 &2751695970263014891
 MeshCollider:
   m_ObjectHideFlags: 0

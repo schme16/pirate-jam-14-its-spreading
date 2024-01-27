@@ -90,7 +90,6 @@ public class IckBallScript : MonoBehaviour
 				bool ray = Physics.Raycast(point, (transform.position - point).normalized, out var hit, 1f, ~(1 << 7));
 				if (ray)
 				{
-					Debug.Log(hit.transform.name);
 					PaintTarget.PaintObject(other.GetComponent<PaintTarget>(), hit.point, hit.normal, brush);
 				}
 			}

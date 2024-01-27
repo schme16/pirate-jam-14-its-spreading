@@ -191,6 +191,7 @@ MonoBehaviour:
   splatTexPick: {fileID: 0}
   weighting: 1
   mesh: {fileID: 0}
+  splatWeight: 0
 --- !u!1 &2701783887578869022 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8256134651489076907, guid: e5a3f6a24558e704cb7ce76648314092,
@@ -239,6 +240,7 @@ MonoBehaviour:
   splatTexPick: {fileID: 0}
   weighting: 1
   mesh: {fileID: 0}
+  splatWeight: 0
 --- !u!1 &3801196155444508730 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7146521406498821007, guid: e5a3f6a24558e704cb7ce76648314092,
@@ -287,6 +289,7 @@ MonoBehaviour:
   splatTexPick: {fileID: 0}
   weighting: 1
   mesh: {fileID: 0}
+  splatWeight: 0
 --- !u!1 &5819927116147807323 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -516098083770646512, guid: e5a3f6a24558e704cb7ce76648314092,
@@ -335,6 +338,7 @@ MonoBehaviour:
   splatTexPick: {fileID: 0}
   weighting: 1
   mesh: {fileID: 0}
+  splatWeight: 0
 --- !u!1 &6691893480335267246 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8416272007918961125, guid: e5a3f6a24558e704cb7ce76648314092,
@@ -383,3 +387,4 @@ MonoBehaviour:
   splatTexPick: {fileID: 0}
   weighting: 1
   mesh: {fileID: 0}
+  splatWeight: 0

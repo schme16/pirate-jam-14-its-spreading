@@ -484,6 +484,7 @@ MonoBehaviour:
   splatTexPick: {fileID: 0}
   weighting: 1
   mesh: {fileID: 0}
+  splatWeight: 0
 --- !u!1 &1592996518051223938 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7640558969779515294, guid: 8fcdbde5e3ea9d243b4c71b12ac6dee1,
@@ -612,6 +613,7 @@ MonoBehaviour:
   splatTexPick: {fileID: 0}
   weighting: 1
   mesh: {fileID: 0}
+  splatWeight: 0
 --- !u!1 &4311988371515538090 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5171399634971331766, guid: 8fcdbde5e3ea9d243b4c71b12ac6dee1,
@@ -708,6 +710,7 @@ MonoBehaviour:
   splatTexPick: {fileID: 0}
   weighting: 1
   mesh: {fileID: 0}
+  splatWeight: 0
 --- !u!1 &4649269720002698183 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4857620179410162215, guid: 8fcdbde5e3ea9d243b4c71b12ac6dee1,
@@ -783,6 +786,7 @@ MonoBehaviour:
   splatTexPick: {fileID: 0}
   weighting: 1
   mesh: {fileID: 0}
+  splatWeight: 0
 --- !u!1 &5113490027458723614 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4979567129936492286, guid: 8fcdbde5e3ea9d243b4c71b12ac6dee1,
@@ -830,6 +834,7 @@ MonoBehaviour:
   splatTexPick: {fileID: 0}
   weighting: 1
   mesh: {fileID: 0}
+  splatWeight: 0
 --- !u!1 &5289382095259124928 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5371550809261985056, guid: 8fcdbde5e3ea9d243b4c71b12ac6dee1,
@@ -904,6 +909,7 @@ MonoBehaviour:
   splatTexPick: {fileID: 0}
   weighting: 1
   mesh: {fileID: 0}
+  splatWeight: 0
 --- !u!1 &5436968434847831856 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5233112405309087440, guid: 8fcdbde5e3ea9d243b4c71b12ac6dee1,
@@ -1032,6 +1038,7 @@ MonoBehaviour:
   splatTexPick: {fileID: 0}
   weighting: 1
   mesh: {fileID: 0}
+  splatWeight: 0
 --- !u!64 &6139187260893302994
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1155,6 +1162,7 @@ MonoBehaviour:
   splatTexPick: {fileID: 0}
   weighting: 1
   mesh: {fileID: 0}
+  splatWeight: 0
 --- !u!1 &8197017318755198056 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -995970412500324984, guid: 8fcdbde5e3ea9d243b4c71b12ac6dee1,
@@ -1230,6 +1238,7 @@ MonoBehaviour:
   splatTexPick: {fileID: 0}
   weighting: 1
   mesh: {fileID: 0}
+  splatWeight: 0
 --- !u!1 &8821283146026855044 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -466329591000292508, guid: 8fcdbde5e3ea9d243b4c71b12ac6dee1,
