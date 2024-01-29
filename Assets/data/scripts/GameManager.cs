@@ -137,7 +137,14 @@ public class GameManager : MonoBehaviour
 		ick.gameObject.SetActive(true);
 
 		cam.enabled = true;
+		var ickBalls =  FindObjectsOfType<IckBallScript>();
+		foreach (var _ickball in ickBalls)
+		{
+			Destroy(_ickball);
+		}
+		
 		PaintTarget.ClearAllPaint();
+		
 		if (timerOverride > 0)
 		{
 			timer = timerOverride;
@@ -166,8 +173,8 @@ public class GameManager : MonoBehaviour
 			PlayerPrefs.Save();
 		}
 
-		uiCurrentIckScore.text = $"{PaintTarget.scores.x:F2}%";
-		uiBestIckScoreTimer.text = $"{pb:F2}%".ToString();
+		uiCurrentIckScore.text = $"{PaintTarget.scores.x:F2}";
+		uiBestIckScoreTimer.text = $"{pb:F2}".ToString();
 
 		uiFinishedScreen.SetActive(true);
 	}
