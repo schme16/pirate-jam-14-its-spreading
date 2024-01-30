@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 30165614}
   - component: {fileID: 30165615}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,6 @@ SpriteRenderer:
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -291,7 +290,6 @@ SpriteRenderer:
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -465,7 +463,6 @@ MeshRenderer:
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1722,7 +1719,6 @@ Light:
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
-  m_ForceVisible: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &207147541 stripped
@@ -2657,7 +2653,7 @@ GameObject:
   m_Component:
   - component: {fileID: 247156540}
   - component: {fileID: 247156541}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: EndScreenExample
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2698,7 +2694,6 @@ SpriteRenderer:
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3512,8 +3507,8 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1600391159}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &353416836
-MeshCollider:
+--- !u!65 &353416841
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3530,31 +3525,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -8678823145569952518, guid: e9d3a88ee6fa5b9418954d388ef8d540, type: 3}
---- !u!114 &353416837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 353416832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40ed8ad4fc591514692edfe1dbb12e42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paintTextureSize: 256
-  SetupOnStart: 1
-  PaintAllSplats: 0
-  debugTexture: 0
-  splatTex: {fileID: 0}
-  splatTexPick: {fileID: 0}
-  weighting: 1
-  mesh: {fileID: 0}
-  splatWeight: 0
+  serializedVersion: 3
+  m_Size: {x: 2.000061, y: 2.000061, z: 2.000061}
+  m_Center: {x: 0.000000029802322, y: 0, z: 0}
 --- !u!1001 &408294076
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3706,7 +3679,6 @@ Light:
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
-  m_ForceVisible: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &410087041
@@ -4227,19 +4199,19 @@ MonoBehaviour:
   m_RenderShadows: 0
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
-  m_CameraType: 1
+  m_CameraType: 0
   m_Cameras: []
   m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 32
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
-  m_Antialiasing: 0
+  m_RenderPostProcessing: 1
+  m_Antialiasing: 3
   m_AntialiasingQuality: 2
-  m_StopNaN: 0
-  m_Dithering: 0
+  m_StopNaN: 1
+  m_Dithering: 1
   m_ClearDepth: 0
   m_AllowXRRendering: 1
   m_AllowHDROutput: 1
@@ -4292,7 +4264,7 @@ Camera:
   field of view: 60
   orthographic: 1
   orthographic size: 1
-  m_Depth: 0
+  m_Depth: 5
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -4302,7 +4274,7 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
+  m_AllowDynamicResolution: 1
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -4512,7 +4484,7 @@ GameObject:
   m_Component:
   - component: {fileID: 712437314}
   - component: {fileID: 712437315}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Background_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4553,7 +4525,6 @@ SpriteRenderer:
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4692,7 +4663,6 @@ MeshRenderer:
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6217,7 +6187,6 @@ MeshRenderer:
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6302,7 +6271,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1379353415
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6835,6 +6804,21 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: -1255605710908113952, guid: e9d3a88ee6fa5b9418954d388ef8d540,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 19.88419
+      objectReference: {fileID: 0}
+    - target: {fileID: -1255605710908113952, guid: e9d3a88ee6fa5b9418954d388ef8d540,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.9751
+      objectReference: {fileID: 0}
+    - target: {fileID: -1255605710908113952, guid: e9d3a88ee6fa5b9418954d388ef8d540,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.53
+      objectReference: {fileID: 0}
     - target: {fileID: -804731622281664130, guid: e9d3a88ee6fa5b9418954d388ef8d540,
         type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -6857,11 +6841,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -7146521406498821007, guid: e9d3a88ee6fa5b9418954d388ef8d540,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 353416837}
-    - targetCorrespondingSourceObject: {fileID: -7146521406498821007, guid: e9d3a88ee6fa5b9418954d388ef8d540,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 353416836}
+      addedObject: {fileID: 353416841}
   m_SourcePrefab: {fileID: 100100000, guid: e9d3a88ee6fa5b9418954d388ef8d540, type: 3}
 --- !u!4 &1600391160 stripped
 Transform:
@@ -7994,7 +7974,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2053454260}
   - component: {fileID: 2053454261}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SplashNopeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8035,7 +8015,6 @@ SpriteRenderer:
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8337,7 +8316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2091467124}
   - component: {fileID: 2091467125}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SplashICKButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8378,7 +8357,6 @@ SpriteRenderer:
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -9465,12 +9443,17 @@ PrefabInstance:
     - target: {fileID: 1311761666247529129, guid: b64ebd4686aca634b9d108005d355a9b,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.006421242
+      value: 0.006421259
       objectReference: {fileID: 0}
     - target: {fileID: 1311761666247529129, guid: b64ebd4686aca634b9d108005d355a9b,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0018261871
+      value: -0.0018261897
+      objectReference: {fileID: 0}
+    - target: {fileID: 1438719268339326321, guid: b64ebd4686aca634b9d108005d355a9b,
+        type: 3}
+      propertyPath: m_CameraType
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1558311176612391927, guid: b64ebd4686aca634b9d108005d355a9b,
         type: 3}
@@ -9517,6 +9500,11 @@ PrefabInstance:
       propertyPath: uiAscendText
       value: 
       objectReference: {fileID: 1831558434}
+    - target: {fileID: 5740954523478905468, guid: b64ebd4686aca634b9d108005d355a9b,
+        type: 3}
+      propertyPath: climbableLayers.m_Bits
+      value: 511
+      objectReference: {fileID: 0}
     - target: {fileID: 6350203627588754457, guid: b64ebd4686aca634b9d108005d355a9b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9551,6 +9539,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.0020093503
+      objectReference: {fileID: 0}
+    - target: {fileID: 6350203627588754462, guid: b64ebd4686aca634b9d108005d355a9b,
+        type: 3}
+      propertyPath: m_Depth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6350203627588754462, guid: b64ebd4686aca634b9d108005d355a9b,
+        type: 3}
+      propertyPath: m_ClearFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8098645769796131189, guid: b64ebd4686aca634b9d108005d355a9b,
         type: 3}

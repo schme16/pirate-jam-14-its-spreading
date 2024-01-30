@@ -158,7 +158,7 @@ public class PlayerScript : MonoBehaviour
 			if (climbRay)
 			{
 				//Fire one more ray just a little above the object to get the "top" object, minus some gaps allowance
-				bool climbToTopRay = Physics.Raycast(climbHit.point + (transform1.up * 5f), -transform1.up, out var topHit, 50f, climbableLayers);
+				bool climbToTopRay = Physics.Raycast(climbHit.point + (transform1.up * 10f), -transform1.up, out var topHit, 50f, climbableLayers);
 				if (climbToTopRay)
 				{
 					canAscend = true;
@@ -167,7 +167,7 @@ public class PlayerScript : MonoBehaviour
 					//are we on the ground, and did we ask to climb?
 					if (controller.isGrounded && climb)
 					{
-						ascend(transform1.position, topHit.point);
+						ascend(transform1.position, topHit.point + (transform1.up * 0.1f));
 					}
 				}
 			}
